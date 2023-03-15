@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" media="screen" />
+
+</head>
+<body>
+  
+<div class="d-flex min-vh-100 align-items-center justify-content-center bg-degrade">
+  <div class="p-5 col-lg-5 col-md-8 bg-light rounded-5 shadow">
+
+    <div class="m-1 text-center">
+        <img src="{{ url_for('static', filename='_img/logo_nobg.png') }}" height="150">
+    </div>
+    
+    <div class="fs-5">
+
+      {% if error %}
+        <div class="alert alert-warning" role="alert">
+            Incorrect username or password
+        </div>
+      {% endif %}
+
+      <form id="loginForm" action="." method="POST">
+          <div class="mb-3">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+          <label for="passwordInput" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="passwordInput">
+          </div>
+          <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="mostraSenha">
+          <label class="form-check-label" for="mostraSenha">Mostrar senha</label>
+          </div>
+          <div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary fs-5 ps-3 pe-3">Entrar</button>
+          </div>
+      </form>
+
+      <div class="text-center pt-4">
+        <p>Ainda não é inscrito? <a class="link">Crie uma conta</a></p>
+      </div>
+    </div>
+
+  </div>        
+</div>
+
+</body>
+<script>
+
+let showPass = document.getElementById("mostraSenha")
+let passwordInput = document.getElementById("passwordInput")
+
+showPass.addEventListener("change", () => {
+    if (showPass.checked == false){
+    passwordInput.type = "password";
+  } else {
+    passwordInput.type = "text";
+  }
+})
+
+</script>
+</html>
