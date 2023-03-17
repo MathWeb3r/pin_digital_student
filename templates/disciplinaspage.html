@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="_style/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" media="screen" />
 
 </head>
 <body class="vh-100">
 
 <!-- HEADER -->
 <div class="bg-degrade p-3 d-flex flex-row" style="height: 10%;">
-    <img src="_img/logo_white2.png" height=55>
+    <img src="{{ url_for('static', filename='_img/logo_white2.png') }}" height=55>
 </div>
 
 <div class="row m-0"  style="height: 90%;">
     <div class="col-2 bg-light-2 p-0">
 
         <div class="drawer-item">
-            <a class="drawer-item-text">
+            <a class="drawer-item-text" href="{{ url_for('main') }}">
                 <div class="pt-3 pb-2"> 
-                <p class="ms-5"><i class="fa-regular fa-comment-dots"></i> Recados</p>
+                <p class="ms-5"><i class="me-4 fa-regular fa-comment-dots"></i> Recados</p>
                 </div>
             </a>
         </div>
@@ -30,23 +30,23 @@
         <div class="drawer-item selected-item">
             <a class="drawer-item-text">
                 <div class="pt-3 pb-2"> 
-                <p class="ms-5"><i class="fa-solid fa-book-open"></i> Disciplinas </p>
+                <p class="ms-5"><i class="me-4 fa-solid fa-book-open"></i> Disciplinas </p>
                 </div>
             </a>
         </div>
 
         <div class="drawer-item">
-            <a class="drawer-item-text">
+            <a class="drawer-item-text" href="{{ url_for('notas') }}">
                 <div class="pt-3 pb-2"> 
-                <p class="ms-5"><i class="fa-solid fa-table-list"></i> Notas </p>
+                <p class="ms-5"><i class="me-4 fa-solid fa-table-list"></i> Notas </p>
                 </div>
             </a>
         </div>
 
         <div class="drawer-item">
-            <a class="drawer-item-text">
+            <a class="drawer-item-text" href="{{ url_for('perfil') }}">
                 <div class="pt-3 pb-2"> 
-                <p class="ms-5"><i class="fa-solid fa-user"></i> Perfil </p>
+                <p class="ms-5"><i class="me-4 fa-solid fa-user"></i> Perfil </p>
                 </div>
             </a>
         </div>

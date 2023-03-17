@@ -30,12 +30,29 @@
     background-color: #c9c9c9;
 }
 
+.drawer-item a{
+    color: #4d4d4d;
+}
+
+.drawer-item a :hover{
+    color: #363636;
+}
+a
+
 .drawer-item-text {
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5vw;
-    color: #4f4f4f;
+    font-size: 1.25vw;
+}
+
+.drawer-item-text i {
+    font-size: 1vw;
+}
+
+.drawer-item drawer-item-text :hover{
+    transition: 0.2s;
+    color: #b90e0e;
 }
 
 .recados-content {
