@@ -36,6 +36,6 @@ def notas():
 
 @app.route("/perfil", methods=["GET", "POST"])
 def perfil():
-    return render_template("notaspage.html")
+    return render_template("perfilpage.html")
 
 app.run()
