@@ -37,7 +37,6 @@
 .drawer-item a :hover{
     color: #363636;
 }
-a
 
 .drawer-item-text {
     text-decoration: none;
@@ -48,11 +47,6 @@ a
 
 .drawer-item-text i {
     font-size: 1vw;
-}
-
-.drawer-item drawer-item-text :hover{
-    transition: 0.2s;
-    color: #b90e0e;
 }
 
 .recados-content {
