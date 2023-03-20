@@ -92,7 +92,12 @@
                                 {% if disciplinas[row].semestre == semestre %}
                                 <tr>
                                     <th scope="row">{{ disciplinas[row].nome }}</th>
-                                    <td>{{ (presencas[row].valor/disciplinas[row].n_aulas)*100 }}%</td>
+                                    <td> 
+                                        <div class="d-flex justify-content-center">
+                                            <div class="me-2">{{ (presencas[row].valor/disciplinas[row].n_aulas)*100 }}%</div> 
+                                            <div class=""><div class="grafico" style="background: conic-gradient(rgb(0, 199, 66) calc({{(presencas[row].valor/disciplinas[row].n_aulas)}}*100%), #0000 0)"></div></div>
+                                        </div>
+                                    </td>
                                     <td>{{ notas[row].valor }}</td>
                                 </tr>
                                 {% endif %}

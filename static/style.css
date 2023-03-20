@@ -71,3 +71,12 @@ div::-webkit-scrollbar-thumb {
 h4 {
     font-size: large;
 }
+
+.grafico {
+    background-color: rgb(240, 95, 95) !important;  
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    -webkit-mask:radial-gradient(farthest-side,#0000 50%,#000 50%);
+    mask:radial-gradient(farthest-side,#0000 50%,#000 50%)
+}

@@ -68,9 +68,9 @@
                             {% if materia.semestre == n_semestre+1 %}
                             <li class="list-group-item">
                                 <div class="row m-0">
-                                    <div class="col"><p class="m-0">{{ materia.nome }}</p></div>
-                                    <div class="col"><p class="m-0">{{ materia.professor }}</p></div>
-                                    <div class="col"><p class="m-0">{{ semana[materia.dia_aula-1] }}</p></div>
+                                    <div class="col"><p class="m-0"><b>Nome:</b> {{ materia.nome }}</p></div>
+                                    <div class="col"><p class="m-0"><b>Professor:</b> {{ materia.professor }}</p></div>
+                                    <div class="col"><p class="m-0"><b>Dia:</b> {{ semana[materia.dia_aula-1] }}</p></div>
                                 </div>
                             </li>
                             {% endif %}
