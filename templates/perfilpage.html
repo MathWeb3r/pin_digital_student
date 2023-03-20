@@ -68,18 +68,18 @@
                                 <h4>Nome: </h4>
                                 <p>{{ nome }}</p>
                                 <h4>Sobrenome: </h4>
-                                <p>Souza</p>
+                                <p>{{ snome }}</p>
                                 <h4>Email: </h4>
                                 <p>{{ email }}</p>
                             </div>
                             <div class="col">
                                 <h4>Curso: </h4>
-                                <p>Ciencia da Computação</p>
-                                <h4>Periodo: </h4>
-                                <p>Semestre 2</p>
+                                <p>{{ curso }}</p>
                             </div>
                         </div>
-                        
+                        <div>
+                            <a type="button" class="btn btn-danger" href="{{url_for('logout')}}">Logout <i class="fa-solid fa-arrow-right-from-bracket ms-2"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

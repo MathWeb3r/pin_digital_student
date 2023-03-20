@@ -59,7 +59,27 @@
             <h2> Disciplinas </h2>
             <div class="mt-2 pe-2 recados-content">
                 <div class=" row g-3 p-3">
-
+                    
+                    {% for n_semestre in range(semestre_final) %}
+                    <div class="rounded-5 bg-body p-4 shadow text-center">
+                        <h3>Semestre {{ n_semestre+1}}</h3>
+                        <ul class="list-group list-group-flush text-start">
+                            {% for materia in disciplinas %}
+                            {% if materia.semestre == n_semestre+1 %}
+                            <li class="list-group-item">
+                                <div class="row m-0">
+                                    <div class="col"><p class="m-0">{{ materia.nome }}</p></div>
+                                    <div class="col"><p class="m-0">{{ materia.professor }}</p></div>
+                                    <div class="col"><p class="m-0">{{ semana[materia.dia_aula-1] }}</p></div>
+                                </div>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                    
+                    <!--
                     <div class="rounded-5 bg-body p-4 shadow text-center">
                         <h3>Semestre 1</h3>
                         <ul class="list-group list-group-flush text-start">
@@ -88,7 +108,7 @@
                             <li class="list-group-item">Calculo I</li>
                             <li class="list-group-item">Calculo I</li>
                         </ul>
-                    </div>
+                    </div> -->
 
 
                 </div>
