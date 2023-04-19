@@ -87,12 +87,14 @@ def login():
     if request.method == "GET":
         return render_template("index.html", error=False)
 
+    print("request: ", request.form['email'], request.form['password'])
+    
     user = load_user(request.form['email'])
 
     if user == None:
         return render_template("index.html", error=True)
     
-    print(user.check_senha('aa'))
+    
     if not user.check_senha(request.form['password']):
         return render_template("index.html", error=True)
 
@@ -137,7 +139,7 @@ def notas():
     if request.method == "POST":
         semestre = request.form["selector"]
         print(semestre)
-        return render_template("notaspage.html", notas=current_user.notas, presencas=current_user.presencas, disciplinas=disciplinas, len=len(disciplinas), n_semestres=n_semestres, semestre=int(semestre))
+        return render_template("notaspage.html", notas=current_user.notas, presencas=current_user.presencas, disciplinas=disciplinas, len=len(disciplinas), n_semestres=n_semestres, semestre=int(semestre), controle=1)
 
     return render_template("notaspage.html", notas=current_user.notas, presencas=current_user.presencas, disciplinas=disciplinas, len=len(disciplinas), n_semestres=n_semestres, semestre=1)
 

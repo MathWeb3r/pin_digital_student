@@ -80,3 +80,14 @@ h4 {
     -webkit-mask:radial-gradient(farthest-side,#0000 50%,#000 50%);
     mask:radial-gradient(farthest-side,#0000 50%,#000 50%)
 }
+
+.disciplina-row {
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+.disciplina-row :hover{
+    text-decoration: none;
+    color: rgba(3, 101, 154);
+}
+
